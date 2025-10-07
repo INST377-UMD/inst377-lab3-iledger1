@@ -1,0 +1,27 @@
+/* custom font family for body */
+body { font-family: Arial, sans-serif; margin: 0; background:#f5f5f5; color:#222; }
+
+/* header + footer share same class, centered, different color, margin + padding */
+.bar { background:#334; color:#fff; text-align:center; padding:12px; margin:10px; }
+
+/* nav: hover state, lined up horizontally, no bullet points */
+.nav { list-style:none; padding:0; margin:0 10px 10px; display:flex; gap:8px; justify-content:center; }
+.nav a { text-decoration:none; padding:6px 10px; background:#e6e6e6; color:#111; }
+.nav a:hover { background:#d6d6d6; }
+
+/* layout: percentages for main and sidebar, both with margin + padding */
+.row { display:flex; gap:10px; margin:0 10px 10px; }
+.main { width:70%; background:#fff; padding:12px; }
+.side { width:30%; background:#eef; padding:12px; transition:background .15s; }
+.side:hover { background:#dde7ff; }
+
+/* form: name label, select feature, width changes for focus */
+form { display:grid; gap:8px; }
+input[type="text"], input:not([type]) , input {
+  width:60%; max-width:400px; padding:6px; border:1px solid #ccc; transition:width .2s;
+}
+#name:focus { width:80%; outline:none; border-color:#66a; box-shadow:0 0 0 2px rgba(102,102,170,.2); }
+
+select { width:200px; padding:6px; }
+button { padding:6px 10px; border:0; background:#66a; color:#fff; cursor:pointer; }
+button:hover { filter:brightness(1.05); }
